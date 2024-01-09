@@ -12,7 +12,7 @@ export interface NotesClient {
 const Notes: NotesClient = {
   search: async (searchOptions = {}) => {
     const { data } = await axios.get<Note[]>(BASE_URL + "/.search", {
-      params: searchOptions,
+      params: { ...searchOptions, sort: { isPinned: 1 } },
     });
     return data;
   },

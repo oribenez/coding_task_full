@@ -6,9 +6,8 @@ const notesModel = new NoteModel();
 
 /* GET home page. */
 router.get("/.search", async (req, res, next) => {
-  const { search, limit, skip } = req.query as unknown as { search: string; limit: number; skip: number };
-  const result = await notesModel.search({ search, limit: limit, skip: skip });
-  console.log("here", result);
+  const { search, limit, skip, sort } = req.query as unknown as { search: string; limit: number; skip: number; sort: { [key: string]: 1 | -1 } };
+  const result = await notesModel.search({ search, limit: limit, skip: skip, sort });
   return res.json(result);
 });
 router.get("/:id", async (req, res, next) => {

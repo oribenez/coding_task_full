@@ -6,11 +6,29 @@ export class NoteModel extends BaseModel<Note> {
     super("src/database/data/Notes.json");
   }
 
-  public async search(options: { search?: string; limit?: number; skip?: number }): Promise<Note[]> {
+  private sortNotes(notes: Note[], sort: { [key: string]: 1 | -1 }): Note[] {
+    return notes.sort((a, b) => {
+      for (let key in sort) {
+        const _key = key as keyof Note;
+        if ((a[_key] || 0) > (b[_key] || 0)) {
+          return sort[key];
+        }
+        if ((a[_key] || 0) < (b[_key] || 0)) {
+          return -sort[key];
+        }
+      }
+      return 0;
+    });
+  }
+
+  public async search(options: { search?: string; limit?: number; skip?: number; sort?: { [key: string]: 1 | -1 } }): Promise<Note[]> {
     let data = await this.loadData();
     const search = options?.search;
     if (!!search) {
       data = data.filter((note) => note.title.toLowerCase().includes(search.toLowerCase()));
+    }
+    if (!!options?.sort) {
+      data = this.sortNotes(data, options.sort);
     }
     if (!!options?.skip) {
       data = data.slice(options.skip);
