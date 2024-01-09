@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Clone this repository.
+2. Install vscode
+3. Open the project in vscode
+4. create 2 new terminals, one for front and one for back.
+5. run npm i in both terminals
+6. use npm run dev in terminals to run both front and back
 
 ## Available Scripts
 
