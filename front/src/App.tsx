@@ -1,5 +1,6 @@
 import React from "react";
 
+// Good luck!
 function App() {
   return (
     <div>
