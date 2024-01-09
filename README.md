@@ -28,7 +28,7 @@ Rules:
 2. Add the search bar.
 3. Add the ability to edit a note title & body. keep in mind that the expirience need to be fast and smooth.
 4. Add the ability to switch between checkboxes & normal mode:
-   * With the ability to check/uncheck a checkbox.
+   - With the ability to check/uncheck a checkbox.
    * When switching back from checkbox to normal mode, the checkbox state should be saved. not need to delete lines that are checked.
    * Bonus: Add the ability to drag and drop a line in checkbox mode.
 5. Add the ability to create a new note (reminder - as close to google keep as possible).
