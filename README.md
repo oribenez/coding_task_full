@@ -1,4 +1,13 @@
-# Getting Started
+# Intro
+
+This repo contains a basic express app & react app to help you build Google Keep!
+Rules:
+
+- You are allowed to use any npm package you want.
+- You are allowed to use any css framework you want.
+- You are NOT allowed to touch the database implementation (everything under 'database' folder).
+
+## Starting the apps:
 
 1. Clone this repository.
 2. Install vscode
@@ -7,45 +16,20 @@
 5. run npm i in both terminals
 6. use npm run dev in terminals to run both front and back
 
-## Available Scripts
+## Guidelines:
+1. [Go to google keep for reference](https://keep.google.com/)
+2. The app should look as close as possible to google keep, containing only the features listed below.
+3. The app should be responsive, and as fast as possible.
+4. The app typs should be as strict as possible.
+5. The code should be as clean & readable as possible. 
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Assignments (parts of Google Keep):
+1. Create an application that lists all the notes in the database, using pagination.
+2. Add the search bar.
+3. Add the ability to edit a note title & body. keep in mind that the expirience need to be fast and smooth.
+4. Add the ability to switch between checkboxes & normal mode:
+   4.1 - With the ability to check/uncheck a checkbox.
+   4.2 - When switching back from checkbox to normal mode, the checkbox state should be saved. not need to delete lines that are checked.
+   4.3 - Bonus: Add the ability to drag and drop a line in checkbox mode.
+5. Add the ability to create a new note (reminder - as close to google keep as possible).
+6. Add the option to Pin a note. Pinned note needs to be shown first in the list.

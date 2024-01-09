@@ -12,7 +12,7 @@ export class BaseModel<T> {
   }
 
   protected async onFinish(data: T[]): Promise<void> {
-    await timeout(200 * data.length);
+    await timeout(100 * data.length);
   }
 
   protected async saveData(data: T[]): Promise<void> {

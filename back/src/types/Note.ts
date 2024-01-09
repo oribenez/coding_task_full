@@ -6,4 +6,5 @@ export default interface Note {
     isChecked: boolean;
   }[];
   isCheckboxes: boolean;
+  isPinned?: boolean;
 }

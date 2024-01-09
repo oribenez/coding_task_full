@@ -32,16 +32,7 @@ export class NoteModel extends BaseModel<Note> {
     return note;
   }
 
-  public async create(note: Note): Promise<Note> {
-    const data = await this.loadData();
-    data.push(note);
-    await this.saveData(data);
-    await this.onFinish([note]);
-
-    return note;
-  }
-
-  public async updateOrCreate(id: string, note: Partial<Note>): Promise<Note> {
+  public async upsert(id: string, note: Partial<Note>): Promise<Note> {
     const data = await this.loadData();
     const index = data.findIndex((note) => note._id === id);
     if (index === -1) {

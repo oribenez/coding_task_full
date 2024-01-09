@@ -6,8 +6,9 @@ const notesModel = new NoteModel();
 
 /* GET home page. */
 router.get("/.search", async (req, res, next) => {
-  const { q, limit, skip } = req.query as unknown as { q: string; limit: number; skip: number };
-  const result = await notesModel.search({ search: q, limit: limit, skip: skip });
+  const { search, limit, skip } = req.query as unknown as { search: string; limit: number; skip: number };
+  const result = await notesModel.search({ search, limit: limit, skip: skip });
+  console.log("here", result);
   return res.json(result);
 });
 router.get("/:id", async (req, res, next) => {
@@ -22,7 +23,7 @@ router.get("/:id", async (req, res, next) => {
 router.put("/:id", async (req, res, next) => {
   const note = req.body;
   const { id } = req.params;
-  const result = await notesModel.updateOrCreate(id, note);
+  const result = await notesModel.upsert(id, note);
   res.status(201).send(result);
 });
 

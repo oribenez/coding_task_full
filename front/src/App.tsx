@@ -1,23 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Note from "./API/Notes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <button
+        onClick={async () => {
+          try {
+            let data = await Note.search({ limit: 10 });
+            console.log(data);
+            const id = data[0]._id;
+            data[0].title = "yuval";
+            await Note.upsertNote(data[0]._id, data[0]);
+            const data2 = await Note.get(id);
+            console.log(data2);
+          } catch (e) {
+            console.log(e);
+          }
+        }}
+      >
+        Click
+      </button>
+      <header>
+        <p>Start coding</p>
       </header>
     </div>
   );
