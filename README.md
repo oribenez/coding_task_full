@@ -5,7 +5,8 @@ Rules:
 
 - You are allowed to use any npm package you want.
 - You are allowed to use any css framework you want.
-- You are NOT allowed to touch the database implementation (everything under 'database' folder).
+- You shouldn't touch the server initialization (index.ts).
+- To remove all data, delete database/data folder
 
 ## Starting the apps:
 
@@ -22,14 +23,19 @@ Rules:
 3. The app should be responsive, and as fast as possible.
 4. The app typs should be as strict as possible.
 5. The code should be as clean & readable as possible. 
+6. Assume the auth is implemented. you have the Auth/getCurrentUser function that returns current user id.
 
 ## Assignments (parts of Google Keep):
 1. Create an application that lists all the notes in the database, using pagination.
-2. Add the search bar.
-3. Add the ability to edit a note title & body. keep in mind that the expirience need to be fast and smooth.
-4. Add the ability to switch between checkboxes & normal mode:
+   Edit the collections schema
+   Feel free to add collections / change them / not use some of them.
+   Bonus - add the option to drag and drop notes (and save the order).
+2. Add the ability to create a new note (reminder - as close to google keep as possible).
+3. Add the search bar.
+4. Add the ability to edit a note title & body. keep in mind that the expirience need to be fast and smooth.
+5. Add the ability to switch between checkboxes & normal mode:
    * With the ability to check/uncheck a checkbox.
    * When switching back from checkbox to normal mode, the checkbox state should be saved. not need to delete lines that are checked.
    * Bonus: Add the ability to drag and drop a line in checkbox mode.
-5. Add the ability to create a new note (reminder - as close to google keep as possible).
 6. Add the option to Pin a note. Pinned note needs to be shown first in the list.
+7. Add collaborators to a note. Collaborators rights are the same as creators.

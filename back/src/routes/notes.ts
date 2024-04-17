@@ -1,29 +1,6 @@
 import express from "express";
-import { NoteModel } from "../database/NoteModel";
+import notesController from "../controllers/notes";
 var router = express.Router();
 
-const notesModel = new NoteModel();
-
-/* GET home page. */
-router.get("/.search", async (req, res, next) => {
-  const { search, limit, skip, sort } = req.query as unknown as { search: string; limit: number; skip: number; sort: { [key: string]: 1 | -1 } };
-  const result = await notesModel.search({ search, limit: limit, skip: skip, sort });
-  return res.json(result);
-});
-router.get("/:id", async (req, res, next) => {
-  const { id } = req.params;
-  const result = await notesModel.get(id);
-  if (!result) {
-    return res.status(404).send();
-  } else {
-    return res.json(result);
-  }
-});
-router.put("/:id", async (req, res, next) => {
-  const note = req.body;
-  const { id } = req.params;
-  const result = await notesModel.upsert(id, note);
-  res.status(201).send(result);
-});
-
+router.get("/", notesController.getNotes);
 export default router;
