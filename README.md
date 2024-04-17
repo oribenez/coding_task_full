@@ -18,7 +18,7 @@ Rules:
 
 ## Guidelines:
 1. [Go to google keep for reference](https://keep.google.com/)
-2. The app should look as close as possible to google keep, containing only the features listed below.
+2. The app should look like google keep, containing only the features listed below. (don't waste time on logos and stuff).
 3. The app should be responsive, and as fast as possible.
 4. The app typs should be as strict as possible.
 5. The code should be as clean & readable as possible. 
