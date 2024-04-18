@@ -11,11 +11,12 @@ Rules:
 ## Starting the apps:
 
 1. Clone this repository.
-2. Install vscode
-3. Open the project in vscode
-4. create 2 new terminals, one for front and one for back.
-5. run npm i in both terminals
-6. use npm run dev in terminals to run both front and back
+2. Create your own branch.
+3. Install vscode
+4. Open the project in vscode
+5. create 2 new terminals, one for front and one for back.
+6. run npm i in both terminals
+7. use npm run dev in terminals to run both front and back
 
 ## Guidelines:
 1. [Go to google keep for reference](https://keep.google.com/)
