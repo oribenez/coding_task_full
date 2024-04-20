@@ -1,0 +1,32 @@
+
+.logo{
+    margin: 0;
+    font-weight: 300;
+    color: #505050;
+}
+.headerInnerWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+    margin: 0;
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
+  
+}
+
+.searchWrap{
+    margin: auto 0;
+}
+.searchWrap input{
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: #f2f3f4;
+    width: 200px;
+}
+
+.addNewNoteWrap{
+    margin: 20px auto;
+    width: fit-content;
+}

@@ -1,0 +1,48 @@
+
+
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.newNote{
+    cursor: text;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.newNote span {
+    width: 100%;
+}
+.btnCkNote {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.contentList {
+    flex: 0 0 calc(33.33% - 20px);
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
